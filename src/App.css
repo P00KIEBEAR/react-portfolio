@@ -1,38 +1,297 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Header*/
+.header {
+  padding: 20px;
+  background-color: #080808;
+  color: #35cf16;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+  display: inline-block;
+  font-size: 48px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header div {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.header div ul {
+  list-style-type: none;
+}
+
+.header div ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.background {
+  height: 800px;
+  width: 100%;
+  margin-bottom: 100px;
+  background-image: url(./css/images/All-American.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.sub {
+  float: right;
+  align-items: baseline;
+}
+
+/*Body*/
+body {
+  background-color: #fc3e3e;
+}
+
+.photo {
+  max-width: 400px;
+  padding: 20px;
+  padding-bottom: 20px;
+}
+
+/* grid boxes*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 20px;
+  grid-auto-flow: dense;
+  grid-template-areas: inherit;
+}
+
+.grid-item a {
+  color: #364450;
+  border: 3px solid;
+  background-color: grey;
+  align-content: flex-start;
+}
+
+.grid-item a:hover {
+  background-color: ivory;
+  color: #080808;
+}
+
+.grid-item:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.grid-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 35px;
+  opacity: 0.7;
 }
 
-.App-link {
-  color: #61dafb;
+.java {
+  grid-row: 5 / span 2;
+  height: 100%;
+  width: 100%;
+  background-image: url(./css/images/java.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mix-drinks {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 4;
+  height: 100%;
+  width: 100%;
+  background-image: url(./css/images/mix-drinks.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.led {
+  grid-row: 1 / span 2;
+  grid-column: 3 / auto;
+  height: 100%;
+  width: 100%;
+  background-image: url(./css/images/led-wall.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.calcuator {
+  grid-column: auto;
+  grid-row: 5 / span 2;
+  height: 100%;
+  width: 100%;
+  background-image: url(./css/images/calcuator.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.web {
+  height: 200%;
+  width: 100%;
+  background-image: url(./css/images/web.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.Work div {
+  padding-top: 15px;
+  margin-right: 20px;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+p {
+  font-size: 32px;
+  float: right;
+  color: cornsilk;
+  margin: 0 50 0 50;
+}
+
+a {
+  padding: 10px;
+}
+
+.content {
+  width: 75%;
+  display: flex;
+  margin-left: 20px;
+  color: maroon;
+}
+
+.About-Me p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding-bottom: 20px;
+  color: #364450;
+}
+
+.title {
+  font-size: 48px;
+  color: #303335;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  border-bottom: 3px solid;
+  width: 80%;
+}
+
+.Work {
+  height: auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-attachment: fixed;
+  background-color: burlywood;
+  color: #364450;
+  padding-bottom: 20px;
+}
+
+.Work h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.Contact-Me {
+  margin-bottom: 20px;
+  padding: 50px;
+  height: 200px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #f10f1b;
+  color: #96da19;
+}
+
+.Contact-Me h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  text-align: justify;
+}
+
+.Contact-Me h3 {
+  margin-bottom: 20px;
+  font-size: 12;
+  color: antiquewhite;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* footer */
+.footer {
+  padding: 30px;
+  clear: both;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.Resume a {
+  font-size: 32px;
+}
+
+.footer h2 {
+  font-size: 20px;
+}
+
+.linkedin {
+  background-image: url(./css/images/linkedin.jpg);
+}
+
+@media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+    color: white;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+    grid-template-areas: inherit;
+  }
+
+  .content {
+    flex-wrap: wrap;
+  }
+
+  a {
+    color: white;
+  }
+
+  footer h2,
+  footer div {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 30px 15px;
   }
 }
